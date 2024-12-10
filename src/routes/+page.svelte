@@ -3,6 +3,9 @@
 	import { Gallery } from 'flowbite-svelte';
 
 	const images = [
+		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
+		{ type: 'img', alt: 'painting', src: '/img/1-min.jpeg' },
+		{ type: 'img', alt: 'painting', src: '/img/2-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/3-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/4-min.jpeg' },
 		{ type: 'text', text: 'Artist', bgColor: 'bg-blue-400', color: ''},
@@ -10,16 +13,16 @@
 		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/6-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/7-min.jpeg' },
+		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/8-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/9-min.jpeg' },
+		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/10-min.jpeg'},
 		{ type: 'text', text: 'Artist', bgColor: 'bg-blue-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/11-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/12-min.jpeg' },
-		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/13-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/14-min.jpeg' },
-		{ type: 'text', text: 'Artist', bgColor: 'bg-blue-400', color: ''},
 		{ type: 'img', alt: 'painting', src: '/img/15-min.jpeg' },
 		{ type: 'img', alt: 'painting', src: '/img/16-min.jpeg' },
 		{ type: 'text', text: 'Artist', bgColor: 'bg-pink-400', color: ''},
@@ -62,18 +65,21 @@
 		</p>
 	</div>
 
-	<Gallery class="gap-4 grid-cols-2 md:grid-cols-4">
+
+	<div class="masonry sm:masonry-sm md:masonry-md">
 		{#each images as img}
-			{#if img.type == 'text'}
-				<div
-					class="flex-1 h-auto max-w- rounded-lg flex items-center justify-center text-2xl lg:text-6xl font-extrabold uppercase {img.bgColor || 'bg-pink-400'} {img.color || 'text-gray-900'} ">
-					{img.text}
-				</div>
-			{:else}
-				<img src="{img.src}" alt="{img.alt}" class="flex-1 h-full w-full inset-0 rounded-lg bg-gray-50 object-cover" />
-			{/if}
+			<div class="break-inside py-2">
+				{#if img.type == 'text'}
+					<div
+						class="flex-1 h-40 md:h-96 max-w- rounded-lg flex items-center justify-center text-2xl lg:text-6xl font-extrabold uppercase {img.bgColor || 'bg-pink-400'} {img.color || 'text-gray-900'} ">
+						{img.text}
+					</div>
+				{:else}
+					<img src="{img.src}" alt="{img.alt}" class="flex-1 h-full w-full inset-0 rounded-lg bg-gray-50 object-cover" />
+				{/if}
+			</div>
 		{/each}
-	</Gallery>
+	  </div>
 </section>
 
 <footer class="w-full text-center">
