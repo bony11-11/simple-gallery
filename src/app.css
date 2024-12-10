@@ -4,15 +4,15 @@
 
 @layer utilities {
     .masonry {
-      column-gap: 1em;
+      column-gap: 0.5em;
       column-count: 2;
     }
     .masonry-sm {
-      column-gap: 1em;
+      column-gap: 0.5em;
       column-count: 2;
     }
     .masonry-md {
-      column-gap: 1em;
+      column-gap: 0.5em;
       column-count: 3;
     }
     .break-inside {
