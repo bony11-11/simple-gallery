@@ -36,7 +36,7 @@
 </header>
 
 <section class="w-full flex items-center justify-center">
-	<div class="w-full lg:w-2/3 flex flex-col justify-center items-center gap-8 px-4">
+	<div class="w-full lg:w-2/3 flex flex-col justify-center items-center gap-8 px-4 text-white">
 		<Gallery class="gap-2 grid-cols-2">
 			<img src="/img/1.jpeg" alt="creative" class="h-auto max-w- rounded-lg" />
 			<div class="h-auto max-w- rounded-lg flex items-center justify-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-pink-400 uppercase">
@@ -58,12 +58,12 @@
 			</p>
 		</div>
 
-		<div class="masonry sm:masonry-sm md:masonry-md">
+		<div class="masonry sm:masonry-sm md:masonry-md ">
 			{#each images as img, index}
 				<div class="break-inside py-1">
 					{#if img.type == 'text'}
 						<div
-							class="flex-1 h-40 md:h-96 max-w- rounded-lg flex items-center justify-center text-2xl lg:text-6xl font-extrabold uppercase {img.bgColor || 'bg-pink-400'} {img.color || 'text-gray-900'} ">
+							class="flex-1 h-40 md:h-96 max-w- rounded-lg flex items-center justify-center text-2xl lg:text-6xl font-extrabold uppercase {img.bgColor || 'bg-pink-400'} {img.color || 'text-white'} ">
 							{img.text}
 						</div>
 					{:else}
