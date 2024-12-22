@@ -1,6 +1,5 @@
 <script>
-// @ts-nocheck
-	import { Gallery } from 'flowbite-svelte';
+	import Card from '$lib/card.svelte';
 
 	const images = [
 		{ type: 'text', text: 'Aspire', bgColor: 'bg-pink-400', color: ''},
@@ -37,16 +36,16 @@
 
 <section class="w-full flex items-center justify-center">
 	<div class="w-full lg:w-2/3 flex flex-col justify-center items-center gap-8 px-4 text-white">
-		<Gallery class="gap-2 grid-cols-2">
-			<img src="/img/1.jpeg" alt="creative" class="h-auto max-w- rounded-lg" />
+		<div class="grid gap-4 grid-cols-2">
+			<Card src="/img/1.jpeg" alt="inspiration"/>
 			<div class="h-auto max-w- rounded-lg flex items-center justify-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-pink-400 uppercase">
 				Inspiration
 			</div>
 			<div class="h-auto max-w- rounded-lg flex items-center justify-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-blue-400 uppercase">
 				Creativity
 			</div>
-			<img alt="smart" src="/img/2.jpeg" class="h-auto max-w- rounded-lg" />
-		</Gallery>
+			<Card src="/img/2.jpeg" alt="Creativity"/>
+		</div>
 	
 		<div class="w-full md:w-1/2 flex flex-col bg-white gap-20 p-12 my-20 rounded-2xl border-4 border-x-0 border-t-blue-400 border-b-pink-400 text-center">
 			<p class="text-white text-xs md:text-base flex items-center justify-center">
@@ -58,7 +57,7 @@
 			</p>
 		</div>
 
-		<div class="masonry sm:masonry-sm md:masonry-md ">
+		<div class="masonry sm:masonry-sm md:masonry-md">
 			{#each images as img, index}
 				<div class="break-inside py-1">
 					{#if img.type == 'text'}
@@ -67,7 +66,7 @@
 							{img.text}
 						</div>
 					{:else}
-						<img src="{img.src}" alt="{img.alt}" class="flex-1 h-full w-full inset-0 rounded-lg bg-gray-50 object-cover" />
+						<Card src="{img.src}" alt="{img.alt}"/>
 					{/if}
 				</div>
 			{/each}
