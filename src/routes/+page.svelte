@@ -24,7 +24,7 @@
 
 <header class="w-full flex flex-col">
 	<div class="w-full flex flex-col gap-1 bg-pink-400 text-white justify-center items-center pt-20">
-		<h1 class="p-4 text-6xl md:text-8xl font-bold font-sans uppercase">Nosa Gallery</h1>
+		<h1 class="p-4 text-6xl md:text-8xl font-bold font-sans uppercase">Leen's Gallery</h1>
 		<h3 class="p-4 text-2xl font-bold font-sans uppercase underline underline-offset-8 italic">
 			Welcome to the Infinite Canvas of Imagination
 		</h3>
