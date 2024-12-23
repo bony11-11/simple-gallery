@@ -23,10 +23,10 @@
 </script>
 
 <header class="w-full flex flex-col">
-	<div class="w-full flex flex-col gap-1 bg-pink-400 text-white justify-center items-center pt-20">
-		<h1 class="p-4 text-6xl md:text-8xl font-bold font-sans uppercase">The Artist's Mind Gallery</h1>
+	<div class="w-full flex flex-col gap-1 bg-pink-400 text-white justify-center items-center pt-20 text-center">
+		<h1 class="p-4 text-6xl md:text-8xl font-bold font-sans uppercase">The Artist's Mind <br /> Gallery</h1>
 		<h3 class="p-4 text-2xl font-bold font-sans uppercase underline underline-offset-8 italic">
-			This is our special place for art. Anything is possible here!
+			This is our special place for art<br /> Anything is possible here!
 		</h3>
 	</div>
 	<div class="w-full h-full">
